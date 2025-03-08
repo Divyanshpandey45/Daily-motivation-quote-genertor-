@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            flex-direction: column;
+        }
+        .quote-box {
+            background: rgb(250, 248, 248);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 400px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-box">
+        <h2>Daily Motivation</h2>
+        <p id="quote">Click below to get a motivational quote!</p>
+        <button onclick="generateQuote()">New Quote</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "Believe in yourself and all that you are.",
+            "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+            "Do what you can, with what you have, where you are.",
+            "The only way to do great work is to love what you do.",
+            "Don’t watch the clock; do what it does. Keep going.",
+            "Act as if what you do makes a difference. It does."
+
+        ];
+
+        function generateQuote() {
+            let randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").innerText = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
